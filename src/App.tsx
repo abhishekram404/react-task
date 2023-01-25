@@ -3,6 +3,8 @@ import { deepCopy } from "./examples/deepCopy";
 import { shallowCopy } from "./examples/shallowCopy";
 import Reconciliation from "./components/Reconciliation";
 import ReconciliationFix from "./components/ReconciliationFix";
+import User from "./components/User";
+import Profile from "./components/Profile";
 function App() {
   const { width, height } = useWindowSize();
 
@@ -11,7 +13,9 @@ function App() {
 
   return (
     <div className="App">
-      <ReconciliationFix />
+      <User userId={"1"}>
+        <Profile />
+      </User>
     </div>
   );
 }
